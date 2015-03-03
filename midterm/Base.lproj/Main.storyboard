@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="midterm" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="TGt-6w-uzV">
+                                <rect key="frame" x="208" y="28" width="185" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title="Third"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tap:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Gi4-bM-xKe"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8dz-HT-6xb">
+                                <rect key="frame" x="252" y="92" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="20Z-Cm-oNe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="eh4-ra-byG">
+                                <rect key="frame" x="208" y="188" width="185" height="29"/>
+                                <segments>
+                                    <segment title="red"/>
+                                    <segment title="blue"/>
+                                    <segment title="white"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorChange:" destination="vXZ-lx-hvc" eventType="valueChanged" id="cx1-TM-ONo"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-XM-Mam">
+                                <rect key="frame" x="242" y="318" width="117" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="117" id="Cgc-yl-EFa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="+1"/>
+                                    <segment title="+2"/>
+                                </segments>
+                                <connections>
+                                    <action selector="counter:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Qhf-WN-n6J"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hjw-KQ-trL">
+                                <rect key="frame" x="252" y="381" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8dz-HT-6xb" firstAttribute="leading" secondItem="hjw-KQ-trL" secondAttribute="leading" id="2S3-Dc-rAI"/>
+                            <constraint firstItem="eh4-ra-byG" firstAttribute="top" secondItem="8dz-HT-6xb" secondAttribute="bottom" constant="66" id="4TJ-sy-obW"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hjw-KQ-trL" secondAttribute="bottom" constant="189" id="AdG-5M-bq7"/>
+                            <constraint firstItem="jdG-XM-Mam" firstAttribute="centerX" secondItem="hjw-KQ-trL" secondAttribute="centerX" id="DXp-Jy-90K"/>
+                            <constraint firstItem="eh4-ra-byG" firstAttribute="leading" secondItem="TGt-6w-uzV" secondAttribute="leading" id="FaJ-q7-3xF"/>
+                            <constraint firstItem="hjw-KQ-trL" firstAttribute="top" secondItem="jdG-XM-Mam" secondAttribute="bottom" constant="35" id="SIU-hn-ea1"/>
+                            <constraint firstItem="hjw-KQ-trL" firstAttribute="trailing" secondItem="8dz-HT-6xb" secondAttribute="trailing" id="SOb-3C-TBa"/>
+                            <constraint firstItem="TGt-6w-uzV" firstAttribute="centerX" secondItem="8dz-HT-6xb" secondAttribute="centerX" id="Urm-te-mp1"/>
+                            <constraint firstItem="8dz-HT-6xb" firstAttribute="top" secondItem="TGt-6w-uzV" secondAttribute="bottom" constant="36" id="aoP-u8-V1W"/>
+                            <constraint firstItem="TGt-6w-uzV" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lWu-V1-hIm"/>
+                            <constraint firstItem="TGt-6w-uzV" firstAttribute="trailing" secondItem="eh4-ra-byG" secondAttribute="trailing" id="ppK-yy-2r1"/>
+                            <constraint firstItem="TGt-6w-uzV" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="qDN-Uv-Tct"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorSwitch" destination="eh4-ra-byG" id="XyU-zH-Gak"/>
+                        <outlet property="count" destination="hjw-KQ-trL" id="0yQ-ge-ek7"/>
+                        <outlet property="countSc" destination="jdG-XM-Mam" id="mFd-nH-Swd"/>
+                        <outlet property="sc" destination="TGt-6w-uzV" id="QrS-5Q-Taw"/>
+                        <outlet property="text" destination="8dz-HT-6xb" id="84k-fI-UTe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
